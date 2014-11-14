@@ -1,6 +1,6 @@
 require "test_helper"
 
-feature "A coach" do
+feature "A coach can" do
   let(:coach) { users(:coach)  }
   let(:angelique) { clients(:angelique)}
   let(:john) { clients(:john)}
@@ -9,17 +9,17 @@ feature "A coach" do
     visit root_path
   end
 
-  scenario "can see the dashboard" do
+  scenario " see the dashboard" do
     assert_content 'Dashboard'
     assert_content 'Clients'
   end
 
-  scenario "can see the list of clients" do
+  scenario " see the list of clients" do
     assert_content angelique.full_name
     assert_content john.full_name
   end
 
-  scenario  "can register new client" do
+  scenario  " register new client" do
     click_link "New Client" 
     fill_in "First Name", with: "Alain"
     fill_in "Last Name", with: "Delon"
@@ -31,7 +31,29 @@ feature "A coach" do
     assert_content "Client has been registered."
   end
 
-  scenario  "can view the profile of a client" do
+  scenario  " view the profile of a client" do
     click_link angelique.full_name 
   end
+
+  scenario  " see the history of a client's payments" do
+    click_link angelique.full_name
+    click_link 'Payment History'
+  end
+
+  scenario 'can accept a payment' do
+    click_link angelique.full_name
+    click_link 'New Payment'
+    select_date( Date.today, from: "payment_paid_on")
+    fill_in "Amount", with: 150
+    click_button 'Create Payment'
+  end
+
+  scenario 'Searching for a client' do
+
+  end
+
+  scenario 'list of clients who are in arrears' do
+
+  end
+
 end

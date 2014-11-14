@@ -5,17 +5,25 @@ h2
 
 h3 Contact details
   
-| Email:
-= @client.email
-br
+p
+  | Email:
+  = @client.email
+  br
 
-| DoB:
-= @client.birth_date
-br
+  | DoB:
+  = @client.birth_date
+  br
 
-| Gender:
-= @client.gender
-br
+  | Gender:
+  = @client.gender
+  br
 
-| Registration:
-= @client.registered_on
+  | Registration:
+  = @client.registered_on
+
+p
+  = link_to "New Payment", new_client_payment_path(@client)
+  = link_to "Payment History", client_payments_path(@client)
+
+
+
