@@ -1,0 +1,18 @@
+= GForce application
+
+
+== Introduction
+
+
+
+== Features
+
+
+A personal trainer will be able 
+
+- to register as personal trainer
+- to log in 
+- to manage clients 
+  - register new client
+  - terminate contract
+  

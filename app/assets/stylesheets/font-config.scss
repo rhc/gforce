@@ -1,9 +1,12 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+.fa.medium {
+  font-size: 200px;
+}
 
 .fa.big {
-  font-size: 500px;
+  font-size: 700px;
 
   .inverse {
     color: white;

@@ -1,0 +1,20 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+angelique:
+  first_name: Angelique
+  last_name: Luabeya
+  birth_date: 1967-05-03
+  email: aluabeya@gmail.com
+  gender: Female
+  photo: aluabeya.jpg
+  registered_on: 2013-04-09
+
+john:
+  first_name: John
+  last_name: Kyony
+  birth_date: 1994-05-19
+  email: jkyony@gmail.com
+  gender: Male
+  photo: jkyony.jpg
+  registered_on: 2014-04-09

@@ -17,6 +17,8 @@ gem "simple_form"
 gem "high_voltage"
 gem "devise"
 gem "pundit"
+gem 'kaminari'
+
 group :development do
   gem "guard-bundler"
   gem "guard-minitest"
@@ -38,6 +40,7 @@ group :test do
   gem "minitest-rails-capybara"
   gem "faker"
 end
+
 group :production do
   gem "rails_12factor"
 end
