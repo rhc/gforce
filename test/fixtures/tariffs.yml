@@ -1,0 +1,9 @@
+one:
+  starts_on: 2010-1-1 
+  expires_on: 2013-6-30
+  amount: 100
+
+two:
+  starts_on: 2013-7-1
+  expires_on: 2020-12-31
+  amount: 150

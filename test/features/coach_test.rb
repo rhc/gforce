@@ -53,7 +53,12 @@ feature "A coach can" do
   end
 
   scenario 'list of clients who are in arrears' do
+    
+  end
 
+  scenario 'Manage tariffs' do
+    click_link 'Tariffs'
+    assert_content 'Listing Tariffs'
   end
 
 end

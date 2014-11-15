@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Starts on:
+  = @tariff.starts_on
+p
+  strong Expires on:
+  = @tariff.expires_on
+p
+  strong Amount:
+  = @tariff.amount
+
+= link_to 'Edit', edit_tariff_path(@tariff)
+'|
+= link_to 'Back', tariffs_path

@@ -1,0 +1,25 @@
+h1 Listing Tariffs
+
+table
+  thead
+    tr
+      th Starts on
+      th Expires on
+      th Amount
+      th
+      th
+      th
+
+  tbody
+    - @tariffs.each do |tariff|
+      tr
+        td = tariff.starts_on
+        td = tariff.expires_on
+        td = tariff.amount
+        td = link_to 'Show', tariff
+        td = link_to 'Edit', edit_tariff_path(tariff)
+        td = link_to 'Destroy', tariff, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Tariff', new_tariff_path
