@@ -1,6 +1,6 @@
 require "test_helper"
 
-feature "A coach can" do
+feature "In order to manage clients, a coach " do
   let(:coach) { users(:coach)  }
   let(:angelique) { clients(:angelique)}
   let(:john) { clients(:john)}
@@ -53,15 +53,17 @@ feature "A coach can" do
   end
 
   scenario 'list clients who are in arrears' do
-    click_link 'In arrears' 
-    assert_content 'Bad Boy'
-    
+    click_link 'In Arrears' 
   end
 
 
   scenario 'Manage tariffs' do
     click_link 'Tariffs'
     assert_content 'Listing Tariffs'
+  end
+
+  scenario 'list clients that need attention' do
+    assert_content 'Need Attention'
   end
 
 end

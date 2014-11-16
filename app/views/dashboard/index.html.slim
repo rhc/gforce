@@ -1,12 +1,21 @@
 .container
-h1 Dashboard
+  h1 
+    | Dashboard
 
-= link_to "New Client", new_client_path
+  .row.row-fluid
+    .col-xs-4
+      h2 
+        i.fa.fa-user
+        |  Clients 
+      ul
+        li.btn.btn-default = link_to "Active"
+        li.btn.btn-danger = link_to "In Arrears"
+        li.btn.btn-default = link_to "Need Attention"
+        li.btn.btn-default = link_to "Inactive"
 
-h2 
-  i.fa.fa-user
-  |  Clients 
 
-= render 'client_summary'
+    .col-xs-4
+
+        = render 'client_summary'
 
 

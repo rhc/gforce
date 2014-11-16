@@ -1,10 +1,12 @@
-br
-table
+table.table.table-striped.table-hover
+  .btn.btn-default
+    = link_to "New Client", new_client_path
   = paginate @clients
   thead
     tr
       th Full Name
       th Sex
+      th Balance
 
   tbody
     - @clients.each do |client|
@@ -12,4 +14,5 @@ table
         td = link_to client.full_name, client
         td 
           i.fa.small{class = "fa-#{client.gender.downcase}" }
-br
+        td 
+          = number_to_currency(client.balance, unit: "ZAR ")

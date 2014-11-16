@@ -1,0 +1,12 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  issues_on: 2014-11-16
+  amount: 1.5
+  client: 
+
+two:
+  issues_on: 2014-11-16
+  amount: 1.5
+  client: 

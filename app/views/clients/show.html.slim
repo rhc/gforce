@@ -20,6 +20,10 @@ p
 
   | Registration:
   = @client.registered_on
+  br
+
+  | Balance:
+  = number_to_currency(@client.balance, unit: "ZAR")
 
 p
   = link_to "New Payment", new_client_payment_path(@client)

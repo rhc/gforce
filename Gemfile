@@ -18,6 +18,7 @@ gem "high_voltage"
 gem "devise"
 gem "pundit"
 gem 'kaminari'
+gem 'kaminari-bootstrap'
 
 group :development do
   gem "guard-bundler"
