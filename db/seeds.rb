@@ -1,7 +1,7 @@
 require 'faker'
 
 Client.delete_all
-100.times do |i|
+50.times do |i|
   fname = Faker::Name.first_name
   lname =  Faker::Name.last_name
   fullname = [fname,lname].join " "

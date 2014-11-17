@@ -35,7 +35,7 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
+  background-color: #fff;
   padding-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
@@ -44,3 +44,28 @@ section {
   @extend .row;
   margin-top: 20px;
   }
+
+// To remove later
+.form-horizontal {
+  .control-group {
+    @extend .form-group;
+  }
+  .control-label {
+    @extend .col-sm-2;
+  }
+  .control-group > .form-control, .form-group > .form-control, .form-group > .collection {
+    @extend .col-sm-10;
+  }
+  .help-block {
+    @extend .col-sm-offset-2;
+  }
+  .control-label.boolean {
+    text-align: left;
+    font-weight: normal;
+    @extend .col-sm-offset-2;
+  }
+  label.radio {
+    font-weight: normal;
+  }
+}
+

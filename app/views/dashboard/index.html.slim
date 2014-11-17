@@ -8,13 +8,13 @@
         i.fa.fa-user
         |  Clients 
       ul
-        li.btn.btn-default = link_to "Active"
-        li.btn.btn-danger = link_to "In Arrears"
-        li.btn.btn-default = link_to "Need Attention"
-        li.btn.btn-default = link_to "Inactive"
+        li.btn.btn-success = "Active"
+        li.btn.btn-danger = "In Arrears"
+        li.btn.btn-warning = "Need Attention"
+        li.btn.btn-info =  "Inactive"
 
 
-    .col-xs-4
+    .col-xs-8
 
         = render 'client_summary'
 

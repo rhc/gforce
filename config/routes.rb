@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :training_sessions
+
   resources :tariffs
   devise_for :users
 

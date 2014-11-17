@@ -12,8 +12,9 @@ gem 'spring',        group: :development
 gem "thin"
 gem "slim-rails"
 gem "bootstrap-sass"
+gem 'autoprefixer-rails'
+gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form', branch: 'master'
 gem "font-awesome-sass"
-gem "simple_form"
 gem "high_voltage"
 gem "devise"
 gem "pundit"
