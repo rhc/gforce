@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Starts at:
+  = @training_session.starts_at
+p
+  strong Location:
+  = @training_session.location
+p
+  strong Minutes:
+  = @training_session.minutes
+
+= link_to 'Edit', edit_training_session_path(@training_session)
+'|
+= link_to 'Back', training_sessions_path

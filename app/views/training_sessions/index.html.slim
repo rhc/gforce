@@ -1,0 +1,27 @@
+h1 Training Sessions
+
+.btn.btn-success  = link_to 'Schedule New Training Session', new_training_session_path
+
+table.table.table-striped
+  = paginate(@training_sessions)
+  thead
+    tr
+      th Start Date and Time
+      th Minutes
+      th Location
+      th
+      th
+      th
+
+  tbody
+    - @training_sessions.each do |training_session|
+      tr
+        td = training_session.starts_at.to_s(:long)
+        td = training_session.minutes
+        td = training_session.location
+        td = link_to 'Show', training_session
+        td = link_to 'Edit', edit_training_session_path(training_session)
+        td = link_to 'Destroy', training_session, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
