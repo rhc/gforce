@@ -1,9 +1,12 @@
 = simple_form_for(@training_session, html: {class: 'form-horizontal'}) do |f|
   = f.error_notification
 
-  = f.input :starts_at
-  = f.input :location
-  = f.input :minutes
-  = f.input :comments
+  .form-inputs
+    = f.input :starts_at, as: :datetime, label: "Start at"
+    = f.input :location
+    = f.input :minutes
+    = f.input :comments
+  .form-actions
+   = f.button :submit
 
-  = f.button :submit
+

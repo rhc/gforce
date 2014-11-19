@@ -2,7 +2,7 @@ class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy, :watch]
 
   def index
-    @clients = Client.page params[:page]
+    @clients = Client.order(:full_name).page params[:page]
   end
 
   def new

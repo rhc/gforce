@@ -1,6 +1,6 @@
 class DashboardController < ApplicationController
   def index
-    @clients = Client.all.page( params[:page])
+    @clients = Client.order(:first_name, :last_name).page( params[:page])
   end
 
 end
