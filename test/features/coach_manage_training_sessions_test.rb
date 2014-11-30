@@ -11,8 +11,9 @@ feature "In order to manage Training Sessions" do
 
   scenario "The coach schedule one session" do
     click_link 'Schedule New Training Session'
-    select_date_and_time( Date.today , from: :training_session_starts_at)
-    fill_in 'Minutes', with: '60'
+    # select_date_and_time( Date.today , from: :training_session_starts_at)
+    fill_in 'Starts at', with: '04/11/2014 16:00' 
+    fill_in 'Minutes', with: '120'
     fill_in 'Location', with: 'Maracana'
     click_button 'Create Training session'
 
