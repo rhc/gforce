@@ -1,0 +1,23 @@
+h1 Listing attendances
+
+table
+  thead
+    tr
+      th Training session
+      th Client
+      th
+      th
+      th
+
+  tbody
+    - @attendances.each do |attendance|
+      tr
+        td = attendance.training_session
+        td = attendance.client
+        td = link_to 'Show', attendance
+        td = link_to 'Edit', edit_attendance_path(attendance)
+        td = link_to 'Destroy', attendance, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Attendance', new_attendance_path

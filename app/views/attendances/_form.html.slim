@@ -1,0 +1,9 @@
+= simple_form_for(@attendance) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :training_session
+    = f.association :client
+
+  .form-actions
+    = f.button :submit

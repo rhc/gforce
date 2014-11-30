@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :training_sessions
+  resources :attendances
+
+  resources :training_sessions do
+    resources :attendances
+  end
 
   resources :tariffs
   devise_for :users

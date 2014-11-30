@@ -53,7 +53,8 @@ feature "In order to manage clients, a coach " do
   end
 
   scenario 'list clients who are in arrears' do
-    click_link 'In Arrears' 
+    #todo
+    assert_content "In Arrears"
   end
 
 

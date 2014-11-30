@@ -4,6 +4,7 @@ class Client < ActiveRecord::Base
   validates :gender, presence: true
   has_many :payments
   has_many :invoices
+  has_many :attendances
   
   def full_name
     [first_name, last_name].join " "

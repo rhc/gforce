@@ -4,7 +4,7 @@ class TrainingSessionsController < ApplicationController
   respond_to :html
 
   def index
-    @training_sessions = TrainingSession.page params[:page]
+    @training_sessions = TrainingSession.order(starts_at: :desc).page params[:page]
   end
 
   def show
@@ -30,7 +30,7 @@ class TrainingSessionsController < ApplicationController
   end
 
   def update
-    flash[:notice] = 'TrainingSession was successfully updated.' if @training_session.update(training_session_params)
+    flash[:notice] = 'Training Session has been updated.' if @training_session.update(training_session_params)
     respond_with(@training_session)
   end
 

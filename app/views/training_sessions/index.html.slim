@@ -15,7 +15,7 @@ table.table.table-striped
 
   tbody
     - @training_sessions.each do |training_session|
-      tr
+      tr[id="training_session_#{training_session.id}"]
         td = training_session.starts_at.to_s(:long)
         td = training_session.minutes
         td = training_session.location

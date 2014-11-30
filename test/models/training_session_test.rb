@@ -3,7 +3,7 @@ require "test_helper"
 describe TrainingSession do
   let(:training_session) { TrainingSession.new }
 
-  it "must be valid" do
-    training_session.must_be :valid?
+  it "can not overlap with a previously saved session" do
+    skip
   end
 end

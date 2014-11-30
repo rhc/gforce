@@ -23,7 +23,7 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 
 gem 'momentjs-rails'
-gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
+gem 'datetimepicker-rails' , github: 'zpaulovics/datetimepicker-rails' , branch: 'master', submodules: true
 
 group :development do
   gem "guard-bundler"

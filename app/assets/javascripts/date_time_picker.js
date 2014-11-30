@@ -1,5 +1,5 @@
 $(function () {
-  $('#service_date_picker').datetimepicker({
+  $('#input.datetimepicker').datetimepicker({
     icons: {
       time: "fa fa-clock-o",
       date: "fa fa-calendar",

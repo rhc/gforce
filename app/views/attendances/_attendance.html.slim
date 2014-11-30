@@ -1,0 +1,6 @@
+.row
+  .col-xs-8
+    = attendance.client.full_name
+  .col-xs-4
+    = link_to "Delete", [attendance.training_session, attendance], method: :delete, data: { confirm: "Are you sure you want to remove this attendance ?"}
+

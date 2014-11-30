@@ -1,15 +1,35 @@
-p#notice = notice
+.container
+  .row
+    .col-xs-12
+      p#notice = notice
+  .row 
+    .col-xs-9
+      p
+        strong 
+          = @training_session.to_s
+    .col-xs-3
+      = link_to 'Edit', edit_training_session_path(@training_session)
+      '|
+      = link_to 'Back', training_sessions_path
+  .row 
+    .btn = button_to 'Programme', training_sessions_path, method: :get
+    .btn = button_to 'Attendance', training_session_path(@training_session), method: :get
+    .btn = button_to 'Workouts'
+  .row
+    .col-xs-8 = "#{@training_session.attendances.count} Participants" 
+  .col-xs-12
+    table.table.table-striped.table-hover
+      thead
+        tr
+          th
+            | Participant
+          th
+            .btn 
+              = link_to 'Add Participant', 
+                new_training_session_attendance_path([@training_session])
+      tbody
+        - @training_session.attendances.each do |attendance|
+          tr
+            td = render attendance
 
-p
-  strong Starts at:
-  = @training_session.starts_at
-p
-  strong Location:
-  = @training_session.location
-p
-  strong Minutes:
-  = @training_session.minutes
 
-= link_to 'Edit', edit_training_session_path(@training_session)
-'|
-= link_to 'Back', training_sessions_path
