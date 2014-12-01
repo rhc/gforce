@@ -2,6 +2,7 @@ class TrainingSession < ActiveRecord::Base
   validates :starts_at, presence: true
   validates :minutes, presence: true, numericality: { only_integer: true, greater_than: 0}
   validates :location, presence: true
+  validate :cannot_overlap_with_a_previously_saved_session
 
   has_many :attendances
   
@@ -11,7 +12,7 @@ class TrainingSession < ActiveRecord::Base
   end
 
   def overlaps?(other)
-    (starts_at < other.ends_at) && ( other.starts_at < starts_at)
+    (starts_at <= other.ends_at) && ( other.starts_at <= starts_at)
   end
 
   def to_s
@@ -19,8 +20,9 @@ class TrainingSession < ActiveRecord::Base
   end
 
   private
-  def two_sessions_cannot_overlap
-    #todo here
+  def cannot_overlap_with_a_previously_saved_session
+    overlaps = TrainingSession.select {|ts| overlaps?(ts) && ts != self}.map(&:to_s)
+    errors.add(:starts_at, "overlaps with another session #{overlaps}" ) if overlaps.any?
   end
 
 end
