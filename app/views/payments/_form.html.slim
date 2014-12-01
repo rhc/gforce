@@ -1,5 +1,5 @@
 = simple_form_for( [@client, @payment], html: {multipart: true} ) do |f|
   = f.input :amount
-  = f.input :paid_on
+  = f.input :paid_on, as: :date_picker
 
   = f.submit 

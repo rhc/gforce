@@ -25,7 +25,7 @@ feature "In order to manage clients, a coach " do
     fill_in "Last Name", with: "Delon"
     fill_in 'Sex', with: "Male"
     fill_in 'Email', with: 'ad@gmail.com'
-    select_date( Date.today, from: "client_birth_date")
+    fill_in 'Date of Birth', with: '03/05/1989'
     click_button "Create Client"
 
     assert_content "Client has been registered."
@@ -43,7 +43,7 @@ feature "In order to manage clients, a coach " do
   scenario 'can accept a payment' do
     click_link angelique.full_name
     click_link 'New Payment'
-    select_date( Date.today, from: "payment_paid_on")
+    fill_in 'Paid on', with: Date.today
     fill_in "Amount", with: 150
     click_button 'Create Payment'
   end

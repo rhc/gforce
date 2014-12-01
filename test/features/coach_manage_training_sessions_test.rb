@@ -40,10 +40,10 @@ feature "In order to manage Training Sessions" do
     within "#training_session_#{training_session.id}" do
       click_link "Show"
     end
-    click_button 'Attendance'
-    click_button 'Add Participant'
-    fill_in 'Client', with: client.full_name
-    click_button "Select"
+    click_link 'Add Participant'
+    assert_content 'New attendance'
+    select client.full_name, from: 'Client'
+    click_button "Create Attendance"
     assert_content "#{client.full_name} joined the training session."
     assert_content client.full_name
 

@@ -1,4 +1,5 @@
 class AttendancesController < ApplicationController
+  before_action :set_training_session, only: [:new, :create]
   before_action :set_attendance, only: [:show, :edit, :update, :destroy]
   respond_to :html
 
@@ -10,15 +11,22 @@ class AttendancesController < ApplicationController
   end
 
   def new
-    @attendance = Attendance.new
+    @attendance = @training_session.attendances.new
   end
 
   def edit
   end
 
   def create
-    @attendance = Attendance.new(attendance_params)
-    @attendance.save
+    @attendance = @training_session.attendances.build(attendance_params)
+    if @attendance.save
+      flash[:notice] = "#{@attendance.client.full_name} joined the training session."
+      redirect_to training_session_path(@attendance.training_session)
+    else
+      flash[:error] = 'Please retry'
+      render :new
+    end
+
   end
 
   def update
@@ -34,11 +42,15 @@ class AttendancesController < ApplicationController
   end
 
   private
-    def set_attendance
-      @attendance = Attendance.find(params[:id])
-    end
+  def set_attendance
+    @attendance = Attendance.find(params[:id])
+  end
 
-    def attendance_params
-      params.require(:attendance).permit(:training_session_id, :client_id)
-    end
+  def set_training_session
+    @training_session = TrainingSession.find(params[:training_session_id]) 
+  end
+
+  def attendance_params
+    params.require(:attendance).permit(:training_session_id, :client_id)
+  end
 end

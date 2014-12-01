@@ -33,6 +33,10 @@ class Client < ActiveRecord::Base
     end
   end
 
+  def to_s
+    "#{full_name}"
+  end
+
   private
 
   def last_invoice

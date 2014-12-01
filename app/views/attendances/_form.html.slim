@@ -1,8 +1,8 @@
-= simple_form_for(@attendance) do |f|
+= simple_form_for([@training_session,@attendance]) do |f|
   = f.error_notification
+  = @training_session.to_s
 
   .form-inputs
-    = f.association :training_session
     = f.association :client
 
   .form-actions
