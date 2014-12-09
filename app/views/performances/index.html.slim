@@ -1,0 +1,25 @@
+h1 Listing performances
+
+table
+  thead
+    tr
+      th Attendance
+      th Planned workout
+      th Score
+      th
+      th
+      th
+
+  tbody
+    - @performances.each do |performance|
+      tr
+        td = performance.attendance
+        td = performance.planned_workout
+        td = performance.score
+        td = link_to 'Show', performance
+        td = link_to 'Edit', edit_performance_path(performance)
+        td = link_to 'Destroy', performance, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Performance', new_performance_path

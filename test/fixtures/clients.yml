@@ -1,5 +1,3 @@
-# Read about fixtures at
-# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 angelique:
   first_name: Angelique
@@ -18,3 +16,13 @@ john:
   gender: Male
   photo: jkyony.jpg
   registered_on: 2014-04-09
+
+
+glen:
+  first_name: Glen
+  last_name: Kyony
+  birth_date: 2000-12-26
+  email: glen@gmail.com
+  gender: Male
+  photo: glen.jpg
+  registered_on: 2013-04-09

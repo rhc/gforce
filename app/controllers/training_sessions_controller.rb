@@ -22,7 +22,7 @@ class TrainingSessionsController < ApplicationController
   def create
     @training_session = TrainingSession.new(training_session_params)
     if @training_session.save
-      flash[:notice] = 'Training Session has been scheduled.' 
+      flash[:notice] = 'Training Session has been scheduled.'
       redirect_to training_sessions_path
     else
       render :new
@@ -35,8 +35,13 @@ class TrainingSessionsController < ApplicationController
   end
 
   def destroy
-    @training_session.destroy
-    respond_with(@training_session)
+    if @training_session.attendances.empty?
+      @training_session.destroy
+      respond_with(@training_session)
+    else
+      flash[:warning] = "You can not delete a training session with #{@training_session.attendances.count} participants."
+      redirect_to training_sessions_path
+    end
   end
 
   private

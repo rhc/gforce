@@ -1,0 +1,8 @@
+
+legs:
+  workout: squat
+  training_session: monday 
+
+core:
+  workout: crunch 
+  training_session: tuesday

@@ -1,9 +1,9 @@
-= simple_form_for(@tariff) do |f|
+= simple_form_for(@tariff, html: {class: 'form-horizontal'} ) do |f|
   = f.error_notification
 
   .form-inputs
-    = f.input :starts_on
-    = f.input :expires_on
+    = f.input :starts_on, as: :date_picker
+    = f.input :expires_on, as: :date_picker
     = f.input :amount
 
   .form-actions

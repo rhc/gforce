@@ -9,7 +9,7 @@ table.table.table-striped
       th Start Date and Time
       th Minutes
       th Location
-      th
+      th Participants
       th
       th
 
@@ -19,6 +19,7 @@ table.table.table-striped
         td = training_session.starts_at.to_s(:long)
         td = training_session.minutes
         td = training_session.location
+        td = training_session.attendances.count
         td = link_to 'Show', training_session
         td = link_to 'Edit', edit_training_session_path(training_session)
         td = link_to 'Destroy', training_session, data: {:confirm => 'Are you sure?'}, :method => :delete

@@ -1,0 +1,25 @@
+reps:
+  acronym: Reps
+  description: Repetitions
+
+laps:
+  acronym: Laps
+  description: Laps 
+
+
+rounds:
+  acronym: Rounds
+  description: Rounds 
+
+seconds:
+  acronym: sec
+  description: Duration in Seconds
+
+
+cms:
+  acronym: cms
+  description: Centimeters
+
+kgs:
+  acronym: kgs
+  description: Kilograms

@@ -1,0 +1,12 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  attendance: 
+  measure: 
+  score: 1.5
+
+two:
+  attendance: 
+  measure: 
+  score: 1.5

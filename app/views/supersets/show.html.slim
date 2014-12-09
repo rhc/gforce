@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Workout:
+  = @superset.workout
+p
+  strong Exercise:
+  = @superset.exercise
+p
+  strong Unit:
+  = @superset.unit
+p
+  strong Amount:
+  = @superset.amount
+p
+  strong Sequence:
+  = @superset.sequence
+
+= link_to 'Edit', edit_superset_path(@superset)
+'|
+= link_to 'Back', supersets_path

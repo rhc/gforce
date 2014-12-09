@@ -1,0 +1,7 @@
+weight:
+  name: Weight
+  unit: kgs
+
+waist:
+  name: Waist
+  unit: cms

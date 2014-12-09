@@ -1,7 +1,15 @@
 one:
-  training_session: one 
+  training_session: monday 
   client: angelique 
 
 two:
-  training_session: two
+  training_session: tuesday
   client: angelique
+
+three:
+  training_session: monday 
+  client: john 
+
+four:
+  training_session: tuesday
+  client: john

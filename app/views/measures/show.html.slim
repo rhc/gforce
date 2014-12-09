@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @measure.name
+p
+  strong Unit:
+  = @measure.unit
+
+= link_to 'Edit', edit_measure_path(@measure)
+'|
+= link_to 'Back', measures_path

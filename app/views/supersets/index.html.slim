@@ -1,0 +1,29 @@
+h1 Listing supersets
+
+table
+  thead
+    tr
+      th Workout
+      th Exercise
+      th Unit
+      th Amount
+      th Sequence
+      th
+      th
+      th
+
+  tbody
+    - @supersets.each do |superset|
+      tr
+        td = superset.workout
+        td = superset.exercise
+        td = superset.unit
+        td = superset.amount
+        td = superset.sequence
+        td = link_to 'Show', superset
+        td = link_to 'Edit', edit_superset_path(superset)
+        td = link_to 'Destroy', superset, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Superset', new_superset_path

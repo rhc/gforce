@@ -1,22 +1,24 @@
 .container
   .row
-    .col-xs-12
-      p#notice = notice
-  .row 
     .col-xs-9
       p
-        strong 
+        strong
           = @training_session.to_s
     .col-xs-3
       = link_to 'Edit', edit_training_session_path(@training_session)
       '|
       = link_to 'Back', training_sessions_path
-  .row 
-    .btn = button_to 'Programme', training_sessions_path, method: :get
-    .btn = button_to 'Attendance', training_session_path(@training_session), method: :get
-    .btn = button_to 'Workouts'
   .row
-    .col-xs-8 = "#{@training_session.attendances.count} Participants" 
+    .col-xs-6
+      strong Workouts
+      = link_to 'New workout', new_training_session_planned_workout_path(@training_session)
+    .col-xs-6
+      = render @training_session.planned_workouts
+  .row
+    .col-xs-6
+      = link_to "Take Measurements"
+  .row
+    .col-xs-8 = "#{@training_session.attendances.count} Participants"
   .col-xs-12
     table.table.table-striped.table-hover
       thead
@@ -24,12 +26,10 @@
           th
             | Participants
           th
-            .btn 
-              = link_to 'Add Participant', 
-                new_training_session_attendance_path([@training_session])
+            .btn
+              = link_to 'Add Participant', new_training_session_attendance_path([@training_session])
       tbody
-        - @training_session.attendances.each do |attendance|
           tr
-            td = render attendance
+            td = render @training_session.attendances
 
 

@@ -5,7 +5,7 @@ class Client < ActiveRecord::Base
   has_many :payments
   has_many :invoices
   has_many :attendances
-  
+
   def full_name
     [first_name, last_name].join " "
   end
@@ -26,7 +26,7 @@ class Client < ActiveRecord::Base
       puts "First Invoice"
       invoices.create(amount: 150, issues_on: self.registered_on)
     end
-    invoice_date = last_invoice.issues_on 
+    invoice_date = last_invoice.issues_on
     while (invoice_date += 1.month) <= Date.today
       puts "Invoice #{invoices.count}"
       invoices.create( amount: 150, issues_on: invoice_date )

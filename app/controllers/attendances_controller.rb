@@ -47,7 +47,7 @@ class AttendancesController < ApplicationController
   end
 
   def set_training_session
-    @training_session = TrainingSession.find(params[:training_session_id]) 
+    @training_session = TrainingSession.find(params[:training_session_id])
   end
 
   def attendance_params

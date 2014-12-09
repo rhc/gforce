@@ -1,0 +1,63 @@
+
+
+Source Codes: |=====================================================================================================|
+[1;31m/home/ckyony/repo/gforce/db/schema.rb:91 - always add db index (payments => [client_id])[0m
+[1;31m/home/ckyony/repo/gforce/app/models/performance.rb:9 - law of demeter[0m
+[1;31m/home/ckyony/repo/gforce/config/routes.rb:18 - needless deep nesting (nested_count > 2)[0m
+[1;31m/home/ckyony/repo/gforce/app/models/tariff.rb:5 - remove unused methods (Tariff#overlap?)[0m
+[1;31m/home/ckyony/repo/gforce/app/models/tariff.rb:12 - remove unused methods (Tariff#cannot_overlap_with_a_previously_saved_tariff)[0m
+[1;31m/home/ckyony/repo/gforce/app/models/attendance.rb:12 - remove unused methods (Attendance#client_cannot_attend_training_session_before_registration)[0m
+[1;31m/home/ckyony/repo/gforce/app/models/client.rb:17 - remove unused methods (Client#good_standing?)[0m
+[1;31m/home/ckyony/repo/gforce/app/models/client.rb:21 - remove unused methods (Client#invoice!)[0m
+[1;31m/home/ckyony/repo/gforce/app/views/attendances/_measurement.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/attendances/_measurement.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/attendances/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/attendances/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/attendances/_form.html.slim:3 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/measurements/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/measurements/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/tariffs/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/workouts/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/performances/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/performances/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/performances/_form.html.slim:3 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/performances/_form.html.slim:3 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/performances/_form.html.slim:3 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/planned_workouts/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/planned_workouts/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/units/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/payments/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/payments/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/clients/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/supersets/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/exercises/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/measures/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/training_sessions/_form.html.slim:1 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/dashboard/_client_summary.html.slim:4 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/app/views/dashboard/_client_summary.html.slim:12 - replace instance variable with local variable[0m
+[1;31m/home/ckyony/repo/gforce/config/routes.rb:29 - restrict auto-generated routes users (except: [:new, :create, :edit])[0m
+[1;31m/home/ckyony/repo/gforce/app/controllers/payments_controller.rb:35 - simplify render in controllers[0m
+[1;31m/home/ckyony/repo/gforce/app/models/attendance.rb:11 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/models/training_session.rb:9 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/models/client.rb:8 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/db/migrate/20141114125828_create_payments.rb:5 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/db/seeds.rb:37 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/config/routes.rb:11 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/config/application.rb:19 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/controllers/training_sessions_controller.rb:25 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/controllers/attendances_controller.rb:50 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/controllers/clients_controller.rb:21 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/controllers/planned_workouts_controller.rb:14 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/views/payments/_form.html.slim:5 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/views/payments/index.html.slim:1 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/views/clients/show.html.slim:1 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/views/clients/edit.html.slim:2 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/views/clients/_form.html.slim:9 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/views/training_sessions/show.html.slim:2 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/views/dashboard/_client_summary.html.slim:15 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/views/dashboard/index.html.slim:2 - remove trailing whitespace[0m
+[1;31m/home/ckyony/repo/gforce/app/views/layouts/_navigation_links.html.slim:14 - remove trailing whitespace[0m
+[1;32m
+Please go to http://rails-bestpractices.com to see more useful Rails Best Practices.[0m
+[1;31m
+Found 56 warnings.[0m

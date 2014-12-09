@@ -20,7 +20,7 @@ feature "In order to manage clients, a coach " do
   end
 
   scenario  " register new client" do
-    click_link "New Client" 
+    click_link "New Client"
     fill_in "First Name", with: "Alain"
     fill_in "Last Name", with: "Delon"
     fill_in 'Sex', with: "Male"
@@ -32,7 +32,7 @@ feature "In order to manage clients, a coach " do
   end
 
   scenario  " view the profile of a client" do
-    click_link angelique.full_name 
+    click_link angelique.full_name
   end
 
   scenario  " see the history of a client's payments" do

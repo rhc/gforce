@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Attendance:
+  = @performance.attendance
+p
+  strong Planned workout:
+  = @performance.planned_workout
+p
+  strong Score:
+  = @performance.score
+
+= link_to 'Edit', edit_performance_path(@performance)
+'|
+= link_to 'Back', performances_path

@@ -1,10 +1,10 @@
-h1 
-  | Payment history for 
+h1
+  | Payment history for
   = @client.full_name
 
 
 - @client.payments.each do |payment|
-  = number_to_currency(payment.amount, unit: " ZAR") 
-  |    
+  = number_to_currency(payment.amount, unit: " ZAR")
+  |
   = payment.paid_on
 

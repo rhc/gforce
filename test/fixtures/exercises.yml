@@ -1,0 +1,9 @@
+burpee:
+  name: Burpee
+  description: MyText
+  video: MyString
+
+squat:
+  name: Squat
+  description: MyText
+  video: MyString

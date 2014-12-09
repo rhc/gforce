@@ -1,8 +1,9 @@
 require "test_helper"
 
 feature "In order to manage Training Sessions" do
-  let(:client) { clients(:angelique)  }
-  let(:training_session) { training_sessions(:one)}
+  let(:client) { clients(:john)  }
+  let(:glen) { clients(:glen)}
+  let(:training_session) { training_sessions(:monday)}
 
   before :each do
     visit root_path
@@ -11,19 +12,22 @@ feature "In order to manage Training Sessions" do
 
   scenario "The coach schedule one session" do
     click_link 'Schedule New Training Session'
-    fill_in 'Starts at', with: Date.today + 5.years 
+    fill_in 'Starts at', with: Date.today + 5.years
     fill_in 'Minutes', with: '120'
     fill_in 'Location', with: 'Maracana'
     click_button 'Create Training session'
-    assert_content 'overlaps'
 
     assert_content "Training Session has been scheduled."
     assert_equal page.current_path, training_sessions_path
-    
+
   end
 
   scenario "The coach can cancel a session" do
 
+
+  end
+
+  scenario "The coach cannot cancel a session with attendees" do
   end
 
 
@@ -42,11 +46,10 @@ feature "In order to manage Training Sessions" do
     end
     click_link 'Add Participant'
     assert_content 'New attendance'
-    select client.full_name, from: 'Client'
+    select glen.full_name, from: 'Client'
     click_button "Create Attendance"
-    assert_content "#{client.full_name} joined the training session."
-    assert_content client.full_name
-
+    assert_content "#{glen.full_name} joined the training session."
+    assert_content glen.full_name
   end
 
 end

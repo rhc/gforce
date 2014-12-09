@@ -16,7 +16,7 @@ Bundler.require(*Rails.groups)
 
 module Gforce
   class Application < Rails::Application
-     
+
   config.generators do |g|
     g.test_framework :minitest, spec: true, fixture: true
     g.helper false

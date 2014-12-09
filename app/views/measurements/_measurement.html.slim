@@ -1,0 +1,6 @@
+.col-xs-10
+  = measurement.to_s
+.col-xs-1
+  = link_to "Edit", edit_measurement_path(measurement)
+.col-xs-1
+= link_to 'Destroy', measurement, method: :delete

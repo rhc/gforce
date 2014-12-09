@@ -1,0 +1,23 @@
+h1 Listing measures
+
+table.table.table-striped
+  thead
+    tr
+      th Name
+      th Unit
+      th
+      th
+      th
+
+  tbody
+    - @measures.each do |measure|
+      tr
+        td = measure.name
+        td = measure.unit
+        td = link_to 'Show', measure
+        td = link_to 'Edit', edit_measure_path(measure)
+        td = link_to 'Destroy', measure, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Measure', new_measure_path

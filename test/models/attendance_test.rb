@@ -4,4 +4,4 @@ describe Attendance do
   let(:attendance) { Attendance.new }
 
 end
-  
+

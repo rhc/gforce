@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Attendance:
+  = @measurement.attendance
+p
+  strong Measure:
+  = @measurement.measure
+p
+  strong Score:
+  = @measurement.score
+
+= link_to 'Edit', edit_measurement_path(@measurement)
+'|
+= link_to 'Back', measurements_path

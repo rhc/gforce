@@ -3,16 +3,23 @@
 
 == Introduction
 
-
-
 == Features
 
 
 A personal trainer will be able 
 
-- to register as personal trainer
+- to sign up as personal trainer
 - to log in 
 - to manage clients 
   - register new client
   - terminate contract
+  - suspend membership
+  - collect payments
+  - remind client about they arrears
+
+- to manage training sessions
+  - plan workouts
+  - record participant's performances
+  - take body measurements
+
   

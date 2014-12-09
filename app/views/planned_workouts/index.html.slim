@@ -1,0 +1,23 @@
+h1 Listing planned_workouts
+
+table
+  thead
+    tr
+      th Workout
+      th Training session
+      th
+      th
+      th
+
+  tbody
+    - @planned_workouts.each do |planned_workout|
+      tr
+        td = planned_workout.workout
+        td = planned_workout.training_session
+        td = link_to 'Show', planned_workout
+        td = link_to 'Edit', edit_planned_workout_path(planned_workout)
+        td = link_to 'Destroy', planned_workout, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Planned workout', new_planned_workout_path

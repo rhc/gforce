@@ -18,7 +18,7 @@ class ClientsController < ApplicationController
       flash[:alert] = " Client has not been registered."
       render :new
     end
-    
+
   end
 
   def show

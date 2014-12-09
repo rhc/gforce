@@ -1,0 +1,12 @@
+= simple_form_for(@superset) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :workout
+    = f.association :exercise
+    = f.association :unit
+    = f.input :amount
+    = f.input :sequence
+
+  .form-actions
+    = f.button :submit

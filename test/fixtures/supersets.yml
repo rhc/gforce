@@ -1,0 +1,13 @@
+one:
+  workout: legs
+  exercise: burpee
+  unit: reps
+  amount: 10
+  sequence: 1
+
+two:
+  workout: legs
+  exercise: squat
+  unit: reps
+  amount: 10
+  sequence: 2

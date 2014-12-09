@@ -32,7 +32,7 @@ class PaymentsController < ApplicationController
       redirect_to [@client, @payment]
     else
       flash[:alert] = 'payment has not been updated.'
-      render action: :edit
+      render :edit
     end
   end
 

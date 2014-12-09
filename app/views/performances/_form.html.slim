@@ -1,0 +1,12 @@
+= simple_form_for([@attendance,@performance]) do |f|
+  = f.error_notification
+  - training_session = @attendance ? @attendance.training_session : @performance.attendance.training_session
+
+  .form-inputs
+    = f.association :planned_workout, 
+            collection: training_session.planned_workouts,
+            selected: training_session.planned_workouts.first
+    = f.input :score
+
+  .form-actions
+    = f.button :submit

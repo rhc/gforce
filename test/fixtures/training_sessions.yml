@@ -1,9 +1,19 @@
-one:
-  starts_at: 2014-11-16 14:30:22
+monday:
+  starts_at: 2014-11-15 16:00
   location: Stadium
   minutes: 120
 
-two:
-  starts_at: 2014-11-17 14:30:22
+tuesday:
+  starts_at: 2014-11-16 16:00
+  location: Stadium
+  minutes: 60
+
+Wednesday:
+  starts_at: 2014-11-17 16:00
+  location: Stadium
+  minutes: 60
+
+Thursday:
+  starts_at: 2014-11-18 16:00
   location: Stadium
   minutes: 60

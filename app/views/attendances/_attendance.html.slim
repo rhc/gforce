@@ -1,6 +1,14 @@
-.row
-  .col-xs-8
-    = attendance.client.full_name
+.row[id="participant_#{attendance.id}"]
   .col-xs-4
+    = attendance.client.full_name
     = link_to "Delete", [attendance.training_session, attendance], method: :delete, data: { confirm: "Are you sure you want to remove this attendance ?"}
+  .col-xs-4
+    - if attendance.performances.empty?
+      = link_to "New Performance", new_training_session_attendance_performance_path(attendance.training_session, attendance)
+    = render attendance.performances
+  .col-xs-4
+    - if attendance.measurements.empty?
+      = link_to "Take Measurements", new_attendance_measurement_path(attendance)
+    - else
+      = render attendance.measurements
 

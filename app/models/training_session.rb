@@ -5,7 +5,8 @@ class TrainingSession < ActiveRecord::Base
   validate :cannot_overlap_with_a_previously_saved_session
 
   has_many :attendances
-  
+  has_many :planned_workouts
+
 #find a better name for minutes: duration, duration_in_minutes
   def ends_at
     starts_at + minutes.minutes
@@ -20,6 +21,7 @@ class TrainingSession < ActiveRecord::Base
   end
 
   private
+
   def cannot_overlap_with_a_previously_saved_session
     overlaps = TrainingSession.select {|ts| overlaps?(ts) && ts != self}.map(&:to_s)
     errors.add(:starts_at, "overlaps with another session #{overlaps}" ) if overlaps.any?

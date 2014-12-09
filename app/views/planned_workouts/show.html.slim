@@ -1,0 +1,10 @@
+p
+  strong Workout:
+  = @planned_workout.workout
+p
+  strong Training session:
+  = @planned_workout.training_session
+
+= link_to 'Edit', edit_planned_workout_path(@planned_workout)
+'|
+= link_to 'Back', planned_workouts_path

@@ -12,7 +12,7 @@ table.table.table-striped.table-hover
     - @clients.each do |client|
       tr
         td = link_to client.full_name, client
-        td 
+        td
           i.fa.small{class = "fa-#{client.gender.downcase}" }
-        td 
+        td
           = number_to_currency(client.balance, unit: "ZAR ")

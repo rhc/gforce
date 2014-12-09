@@ -1,0 +1,14 @@
+legs:
+  name: Legs
+  unit: rounds
+  description: MyText
+
+1600m:
+  name: 4 x 400 m
+  unit: seconds 
+  description: MyText
+
+core:
+  name: Core
+  unit: reps
+  description: Core

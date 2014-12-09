@@ -1,0 +1,9 @@
+one:
+  attendance: monday
+  planned_workout: legs 
+  score: 10
+
+two:
+  attendance: tuesday
+  planned_workout: core 
+  score: 20

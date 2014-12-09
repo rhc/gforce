@@ -1,0 +1,12 @@
+= simple_form_for([@attendance, @measurement]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :weight, label: 'Weight (kgs)'
+    = f.input :waist, label: 'Waist (cms)'
+    = f.input :hip , label: 'Hip (cms)'
+    = f.input :bicep, label: "Bicep (cms)"
+    = f.input :thigh, label: "Thigh (cms)"
+
+  .form-actions
+    = f.button :submit
