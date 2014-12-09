@@ -47,7 +47,7 @@ group :test do
   gem "minitest-rails-capybara"
 end
 
-gem "faker", group: [:test, :production]
+gem "faker"
 
 group :production do
   gem "rails_12factor"
