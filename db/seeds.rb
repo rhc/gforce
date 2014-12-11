@@ -58,11 +58,10 @@ def create_training_sessions
 
 end
 
-def create_clients
+def create_clients(count)
   Client.delete_all
-  clients = 10
-  clients.times do |i|
-    puts "Client #{i+1} out of #{clients}"
+  count.times do |i|
+    puts "Client #{i+1} out of #{count}"
     fname = Faker::Name.first_name
     lname =  Faker::Name.last_name
     fullname = [fname,lname].join " "
@@ -108,5 +107,5 @@ create_measures
 create_exercises
 create_workouts
 create_training_sessions
-create_clients
+create_clients 30
 create_performances

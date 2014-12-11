@@ -16,5 +16,7 @@
 //= require bootstrap-sprockets
 //= require moment
 //= require bootstrap-datetimepicker
+//= require bootstrap-material-design-sass/material
+//= require bootstrap-material-design-sass/ripples
 //= require pickers
 //= require_tree .

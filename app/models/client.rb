@@ -1,7 +1,6 @@
 class Client < ActiveRecord::Base
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :gender, presence: true
+  validates :first_name, :last_name, :gender, :birth_date, :email, :mobile_phone, presence: true
+
   has_many :payments
   has_many :invoices
   has_many :attendances
@@ -35,6 +34,11 @@ class Client < ActiveRecord::Base
 
   def to_s
     "#{full_name}"
+  end
+
+  def self.search(filter)
+    search_condition = "%" + filter + "%"
+    find(:all, :conditions => ['first_name LIKE ? or last_name LIKE ?', search_condition])
   end
 
   private

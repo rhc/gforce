@@ -1,2 +1,23 @@
-h1 Clients#index
-p Find me in app/views/clients/index.html.slim
+.container
+  .row
+    .col-xs-3
+      h1 Clients
+    .col-xs-6#search
+      = render 'search'
+    .col-xs-3.btn-new 
+      = button_to "New Client", new_client_path, method: :get
+  .row
+    = paginate @clients
+    table.table.table-striped.table-hover
+      thead
+        tr
+          th Full Name
+          th Balance
+
+      tbody
+        - @clients.each do |client|
+          tr
+            td = link_to client.full_name, client
+            td
+              = number_to_currency(client.balance, unit: "ZAR ")
+

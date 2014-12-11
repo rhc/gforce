@@ -2,6 +2,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'bootstrap-datetimepicker';
+@import 'bootstrap-material-design-sass/material';
+@import 'bootstrap-material-design-sass/ripples';
 
 // make all images responsive by default
 img {
@@ -70,3 +72,12 @@ section {
   }
 }
 
+// experimental
+.btn-new {
+  margin-top: 30px;
+
+}
+
+#search {
+  margin-top: 30px;
+}

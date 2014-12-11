@@ -1,9 +1,10 @@
 = simple_form_for @client do |f|
   = f.input :first_name, label: "First Name"
   = f.input :last_name, label: "Last Name"
-  = f.input :gender, label: 'Sex'
+  = f.collection_radio_buttons :gender, [['Male'],['Female']], :first, :last
   = f.input :birth_date, label: "Date of Birth", as: :date_picker
   = f.input :email
+  = f.input :mobile_phone
 
 
   = f.submit

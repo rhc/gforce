@@ -1,33 +1,38 @@
-h2
-  i.fa-photo
-  = @client.full_name
+.container
+  .row
+    .col-xs-12
+      h2 = @client.full_name
+      = link_to "Edit", edit_client_path(@client)
+
+    .col-xs-6
+      img src=""
+
+    .col-xs-6 style="margin-top: 20px"
+      .row 
+        .col-xs-6 Email:
+        .col-xs-6 = @client.email
+
+      .row
+        .col-xs-6 DoB:
+        .col-xs-6 = @client.birth_date
+
+      .row
+        .col-xs-6 Gender:
+        .col-xs-6 = @client.gender
+
+      .row
+        .col-xs-6 Registration:
+        .col-xs-6 = @client.registered_on
+      .row
+        .col-xs-6 Balance:
+        .col-xs-6 = number_to_currency(@client.balance, unit: "ZAR")
 
 
-h3 Contact details
-
-p
-  | Email:
-  = @client.email
-  br
-
-  | DoB:
-  = @client.birth_date
-  br
-
-  | Gender:
-  = @client.gender
-  br
-
-  | Registration:
-  = @client.registered_on
-  br
-
-  | Balance:
-  = number_to_currency(@client.balance, unit: "ZAR")
-
-p
-  = link_to "New Payment", new_client_payment_path(@client)
-  = link_to "Payment History", client_payments_path(@client)
+  .row
+  .row
+    = link_to "New Payment", new_client_payment_path(@client)
+  .row
+    = link_to "Payment History", client_payments_path(@client)
 
 
 

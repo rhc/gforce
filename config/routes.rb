@@ -30,6 +30,9 @@ Rails.application.routes.draw do
 
   resources :clients do
     resources :payments
+    member do
+      get :search
+    end
   end
   resources :measurements
 end
